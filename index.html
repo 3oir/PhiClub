@@ -73,7 +73,7 @@
     @media (prefers-reduced-motion: reduce){
       .card{box-shadow:none}
     }
-      /* Schedule styles */
+      
     details.schedule{width:min(680px,100%);margin:0 auto clamp(14px,3.6vw,20px);background:rgba(255,255,255,0.06);border-radius:16px;padding:10px 12px}
     details.schedule summary{cursor:pointer;font-weight:800;letter-spacing:.2px;padding:6px 0;list-style:none}
     .sched-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:8px 4px}
@@ -82,9 +82,17 @@
     .sched-grid li{font-size:clamp(13px,3.4vw,15px)}
     @media (max-width:520px){.sched-grid{grid-template-columns:1fr}}
       .btn-schedule{background:linear-gradient(180deg,#f3f4f6,#e6e7ea);color:#111}
-    /* Schedule styles */
+    
     details.schedule{width:min(680px,100%);margin:0 auto clamp(14px,3.6vw,20px);background:rgba(255,255,255,0.06);border-radius:16px;padding:10px 12px}
     details.schedule summary{cursor:pointer;font-weight:800;letter-spacing:.2px;padding:6px 0;list-style:none}
+    .sched-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:8px 4px}
+    .slot{font-weight:800;margin-bottom:6px;color:var(--accent-yellow)}
+    .sched-grid ul{margin:0;padding-left:18px;line-height:1.6}
+    .sched-grid li{font-size:clamp(13px,3.4vw,15px)}
+    @media (max-width:520px){.sched-grid{grid-template-columns:1fr}}
+    
+    .schedule-box{width:min(680px,100%);margin:0 auto clamp(14px,3.6vw,20px);background:rgba(255,255,255,0.06);border-radius:16px;padding:14px 16px}
+    .schedule-box h3{margin:0 0 8px;font-size:clamp(15px,3.8vw,18px);letter-spacing:.2px}
     .sched-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:8px 4px}
     .slot{font-weight:800;margin-bottom:6px;color:var(--accent-yellow)}
     .sched-grid ul{margin:0;padding-left:18px;line-height:1.6}
@@ -111,43 +119,33 @@
         <span>Anvil Tower, Room 712</span>
       </div>
     </div>
-
-    <!-- Schedule button (opens & scrolls to schedule) -->
-    <div class="cta-list" style="margin-top:-6px; margin-bottom:6px;">
-      <a class="btn btn-schedule" href="#schedule" role="button" onclick="const s=document.getElementById('schedule'); if(s) { s.open=true; s.scrollIntoView({behavior:'smooth', block:'start'}); }">
-        <span>View full schedule</span>
-      </a>
-    </div>
-
-    <!-- Compact schedule: collapsible, mobile-friendly -->
-    <details class="schedule" id="schedule">
-      <summary>Fall meeting dates</summary> collapsible, mobile-friendly -->
-    <details class="schedule" open>
-      <summary>Fall meeting dates</summary>
+  
+    <div class="schedule-box">
+      <h3>Fall meeting dates</h3>
       <div class="sched-grid">
         <div>
           <div class="slot">5:00–7:00PM</div>
           <ul>
-            <li>Thu Sept 25</li>
-            <li>Thu Oct 9</li>
-            <li>Thu Oct 23</li>
-            <li>Thu Nov 6</li>
-            <li>Thu Nov 20</li>
-            <li>Thu Dec 4</li>
+            <li>Sept 25</li>
+            <li>Oct 9</li>
+            <li>Oct 23</li>
+            <li>Nov 6</li>
+            <li>Nov 20</li>
+            <li>Dec 4</li>
           </ul>
         </div>
         <div>
           <div class="slot">6:30–8:30PM</div>
           <ul>
-            <li>Thu Oct 2</li>
-            <li>Thu Oct 16</li>
-            <li>Thu Oct 30</li>
-            <li>Thu Nov 13</li>
-            <li>Thu Nov 27</li>
+            <li>Oct 2</li>
+            <li>Oct 16</li>
+            <li>Oct 30</li>
+            <li>Nov 13</li>
+            <li>Nov 27</li>
           </ul>
         </div>
       </div>
-    </details>
+    </div>
 
     <div class="cta-list">
       <a class="btn btn-discord" href="https://discord.gg/6t89kQAtHT" role="button" rel="noopener">
@@ -166,6 +164,3 @@
   </div>
 </body>
 </html>
-
-
-
