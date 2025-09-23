@@ -48,7 +48,11 @@
     .schedule-meta{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
     .schedule-meta .chip{background:rgba(255,255,255,0.08);padding:6px 10px;border-radius:999px;font-size:clamp(12px,3.4vw,14px)}
     .schedule-meta .sep{opacity:.6}
-    .sched-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:8px 4px}
+    .dates-columns{padding:6px 2px}
+    .dates-list{columns:1;column-gap:22px;margin:0;padding-left:18px}
+    .dates-list li{break-inside:avoid;font-size:clamp(13px,3.4vw,15px);margin:6px 0;line-height:1.5}
+    .badge{display:inline-block;margin-left:8px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,0.12);font-weight:700;font-size:0.9em;color:#fff}
+    @media (min-width:520px){.dates-list{columns:2}}
     .slot{font-weight:800;margin-bottom:6px;color:var(--accent-yellow)}
     .sched-grid ul{margin:0;padding-left:18px;line-height:1.6}
     .sched-grid li{font-size:clamp(13px,3.4vw,15px)}
@@ -70,29 +74,22 @@
     <div class="schedule-box">
       <h3 class="meeting-header">Meeting Dates</h3>
       <div class="schedule-meta"><span class="chip">Every Thursday</span><span class="sep">•</span><span class="chip">Anvil Tower, Room 712</span></div>
-      <div class="sched-grid">
-        <div>
-          <div class="slot">5:00–7:00PM</div>
-          <ul>
-            <li>Sept 25</li>
-            <li>Oct 9</li>
-            <li>Oct 23</li>
-            <li>Nov 6</li>
-            <li>Nov 20</li>
-            <li>Dec 4</li>
-          </ul>
-        </div>
-        <div>
-          <div class="slot">6:30–8:30PM</div>
-          <ul>
-            <li>Oct 2</li>
-            <li>Oct 16</li>
-            <li>Oct 30</li>
-            <li>Nov 13</li>
-            <li>Nov 27</li>
-          </ul>
-        </div>
+      <div class="dates-columns">
+        <ul class="dates-list">
+          <li><span class="date">Sept 25</span> <span class="badge">5:00–7:00PM</span></li>
+          <li><span class="date">Oct 2</span>   <span class="badge">6:30–8:30PM</span></li>
+          <li><span class="date">Oct 9</span>   <span class="badge">5:00–7:00PM</span></li>
+          <li><span class="date">Oct 16</span>  <span class="badge">6:30–8:30PM</span></li>
+          <li><span class="date">Oct 23</span>  <span class="badge">5:00–7:00PM</span></li>
+          <li><span class="date">Oct 30</span>  <span class="badge">6:30–8:30PM</span></li>
+          <li><span class="date">Nov 6</span>   <span class="badge">5:00–7:00PM</span></li>
+          <li><span class="date">Nov 13</span>  <span class="badge">6:30–8:30PM</span></li>
+          <li><span class="date">Nov 20</span>  <span class="badge">5:00–7:00PM</span></li>
+          <li><span class="date">Nov 27</span>  <span class="badge">6:30–8:30PM</span></li>
+          <li><span class="date">Dec 4</span>   <span class="badge">5:00–7:00PM</span></li>
+        </ul>
       </div>
+    </div>
     </div>
 
     <div class="cta-list">
